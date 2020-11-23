@@ -1,16 +1,58 @@
-import React from 'react'
-import CIcon from '@coreui/icons-react'
+import React from "react";
+import CIcon from "@coreui/icons-react";
 
 export default [
   {
-    _tag: 'CSidebarNavItem',
-    name: 'Dashboard',
-    to: '/dashboard',
-    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
+    _tag: "CSidebarNavItem",
+    name: "Dashboard",
+    to: "/dashboard",
+    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon" />,
     // badge: {
     //   color: 'info',
     //   text: 'NEW',
     // }
+  },
+ 
+  {
+    _tag: "CSidebarNavDropdown",
+    name: "News",
+    route: "/notifications",
+    icon: <CIcon name="cil-star" customClasses="c-sidebar-nav-icon" />,
+    _children: [
+      {
+        _tag: "CSidebarNavItem",
+        name: "Article",
+        to: "/notifications/alerts",
+      },
+      {
+        _tag: "CSidebarNavItem",
+        name: "Annonce",
+        to: "/notifications/alerts",
+      },
+    ],
+  },
+  {
+    _tag: "CSidebarNavItem",
+    name: "Events",
+    to: "/events",
+    icon: <CIcon name="cil-calendar" customClasses="c-sidebar-nav-icon" />,
+    // badge: {
+    //   color: 'info',
+    //   text: 'NEW',
+    // }
+  },
+  {
+    _tag: "CSidebarNavDropdown",
+    name: "Notifications",
+    route: "/notifications",
+    icon: "cil-bell",
+    _children: [
+      {
+        _tag: "CSidebarNavItem",
+        name: "Alerts",
+        to: "/notifications/alerts",
+      },
+    ],
   },
   // {
   //   _tag: 'CSidebarNavTitle',
@@ -307,5 +349,4 @@ export default [
   //   _tag: 'CSidebarNavDivider',
   //   className: 'm-2'
   // }
-]
-
+];

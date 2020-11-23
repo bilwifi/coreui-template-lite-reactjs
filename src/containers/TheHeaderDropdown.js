@@ -19,14 +19,14 @@ const TheHeaderDropdown = () => {
       <CDropdownToggle className="c-header-nav-link" caret={false}>
         <div className="c-avatar">
           <CImg
-            src={'avatars/6.jpg'}
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/479px-Orange_logo.svg.png"
             className="c-avatar-img"
             alt="admin@bootstrapmaster.com"
           />
         </div>
       </CDropdownToggle>
       <CDropdownMenu className="pt-0" placement="bottom-end">
-        <CDropdownItem
+        {/* <CDropdownItem
           header
           tag="div"
           color="light"
@@ -79,10 +79,10 @@ const TheHeaderDropdown = () => {
           Projects
           <CBadge color="primary" className="mfs-auto">42</CBadge>
         </CDropdownItem>
-        <CDropdownItem divider />
+        <CDropdownItem divider /> */}
         <CDropdownItem>
           <CIcon name="cil-lock-locked" className="mfe-2" /> 
-          Lock Account
+          Logout
         </CDropdownItem>
       </CDropdownMenu>
     </CDropdown>
